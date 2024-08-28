@@ -1,0 +1,21 @@
+{
+  "name": "gerenciador-veiculos",
+  "version": "1.0.0",
+  "description": "API para gerenciamento de motoristas e veículos",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "Marcus Bragantini",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.5"
+  }
+}
