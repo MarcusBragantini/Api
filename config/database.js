@@ -1,12 +1,20 @@
 import { Sequelize } from 'sequelize';
+import dotenv from 'dotenv';
 
-const sequelize = new Sequelize('u950457610_veiculos','u950457610_becape',"Mvb081521", {
-    host: '149.62.37.1',
-    dialect: 'mysql',
-    logging: false, // Desativa logs de SQL no console
-    define: {
-        timestamps: false // Desativa timestamps automáticos
+dotenv.config();
+
+const sequelize = new Sequelize(
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PASSWORD,
+    {
+        host: process.env.DB_HOST,
+        dialect: process.env.DB_DIALECT,
+        logging: false, 
+        define: {
+            timestamps: false
+        }
     }
-});
+);
 
 export default sequelize;
