@@ -1,5 +1,5 @@
 import Driver from '../../models/Driver.js';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 
 
 export const createDriver = async (req, res) => {

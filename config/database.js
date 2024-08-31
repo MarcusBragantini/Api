@@ -1,15 +1,12 @@
 import { Sequelize } from 'sequelize';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 const sequelize = new Sequelize(
-    process.env.DB_NAME,
-    process.env.DB_USER,
-    process.env.DB_PASSWORD,
+    'gerenciador_veiculos', // Nome do banco de dados
+    'root',                 // Usuário do banco de dados
+    'Bragantini',           // Senha do banco de dados
     {
-        host: process.env.DB_HOST,
-        dialect: process.env.DB_DIALECT,
+        host: 'localhost',  // Endereço do servidor de banco de dados
+        dialect: 'mysql',   // Dialeto a ser usado
         logging: false, 
         define: {
             timestamps: false

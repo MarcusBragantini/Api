@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import sequelize from "./config/database.js";
 import Driver from "./models/Driver.js";
 import Travel from "./models/Travel.js";
@@ -195,7 +195,7 @@ app.patch("/api/drivers/:id", async (req, res) => {
   }
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 sequelize
   .sync()
   .then(() => {
